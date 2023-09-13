@@ -1,12 +1,11 @@
-import Nav from "./components/Nav";
-import Poster from "./components/Poster";
+import LandingPage from "./pages/LandingPage";
+
 
 
 const App = () => {
   return (
     <div>
-      <Nav />
-      <Poster />
+      <LandingPage />
     </div>
   );
 }
