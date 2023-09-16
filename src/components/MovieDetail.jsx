@@ -21,14 +21,27 @@ const MovieDetail = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=${apiKey}`
     )
-      .then((res) => res.json())
-      .then((data) => setMovieDetail(data));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        // Process the data here
+        setMovieDetail(data);
+      })
+      .catch((error) => {
+        // Handle fetch or processing errors here
+        console.error('Fetch error:', error);
+      });
   }, [id]); // Include id in the dependency array
+  
 
   return (
     <div className="flex ">
       {/* SideBar */}
-      <div className=" flex flex-col h-screen  py-4  border-solid border-2 border-[#0000004C] gap-y-6 rounded-tr-3xl rounded-br-xl">
+      <div className="hidden md:flex flex-col h-screen  py-4  border-solid border-2 border-[#0000004C] gap-y-6 rounded-tr-3xl rounded-br-xl">
         {/* MovieBox Logo */}
         <div className="flex items-center px-4 mb-2 text-lg font-bold text-black gap-x-4">
           <img src={tv} alt="Logo" className="inline w-8" /> MovieBox

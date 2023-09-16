@@ -19,18 +19,22 @@ const App = () => {
     fetch(
       `https://api.themoviedb.org/3/${type}?api_key=${apiKey}&query=${searchKey}`
     )
-      .then((res) => res.json())
-      .then((data) => setMovieList(data.results));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((data) => {
+        // Process the data here
+        setMovieList(data.results);
+      })
+      .catch((error) => {
+        // Handle fetch or processing errors here
+        console.error('Fetch error:', error);
+      });
   };
-
-  //  // Function that fetches data from API
-  //  const getMovieDetail = () => {
-  //   fetch(
-  //     `https://api.themoviedb.org/3/movie/${movie.id}?language=en-US&api_key=${apiKey}`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => setMovieDetail(data));
-  // };
+  
 
   useEffect(() => {
     getMovie();

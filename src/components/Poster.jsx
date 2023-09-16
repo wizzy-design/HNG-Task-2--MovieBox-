@@ -11,9 +11,9 @@ const Poster = ({isVisible}) => {
   return (
     <div className={`relative bg-[url('../src/assets/images/john_wickBg.svg')] h-screen bg-center bg-no-repeat bg-cover ${posterClasses}`}>
       {/* Movie Description */}
-      <div className="absolute w-1/3 space-y-4 top-40 left-16">
+      <div className="absolute w-full space-y-4 md:w-1/3 top-40 left-16">
         {/* Movie Title */}
-        <h2 id="title" className="text-5xl font-bold leading-tight text-white">
+        <h2 id="title" className="text-3xl font-bold leading-tight text-white md:text-5xl">
           John Wick 3 : Parabellum
         </h2>
 
@@ -33,7 +33,7 @@ const Poster = ({isVisible}) => {
         </div>
 
         {/* Movie Synopsis */}
-        <p className="w-5/6 text-white">
+        <p className="w-1/2 text-sm text-white md:w-5/6">
           John Wick is on the run after killing a member of the international
           assassins&apos; guild, and with a $14 million price tag on his head,
           he is the target of hit men and women everywhere.

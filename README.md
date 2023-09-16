@@ -1,8 +1,9 @@
-# React + Vite
+# HNG TASK 2 (MovieBox)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieBox is a web application that leverages the TMDB API to retrieve movie information. It displays essential details about movies and offers a movie search feature. I developed this project using React JS and Tailwind CSS.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## To run MovieBox on your local device, follow these steps:
+1. Download the project folder.
+2. Open your command line prompt.
+3. Execute the command "npm run dev".
+4. Copy the provided URL and paste it into your web browser.

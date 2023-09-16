@@ -8,7 +8,7 @@ const Movie = ({isVisible, renderMovies}) => {
   return (
     <div>
       <h1 className={`mb-8 ml-16 text-2xl font-bold ${titleClass}`}>{`${title}`}</h1>
-      <div className="grid h-full grid-cols-4 mx-12 mt-10 mb-24 gap-y-24">{renderMovies()}</div>
+      <div className="grid h-full mx-12 mt-10 mb-24 md:grid-cols-4 gap-y-24">{renderMovies()}</div>
     </div>
   );
 };

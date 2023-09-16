@@ -2,12 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    // colors: {
-    //   graySub: "#9CA3AF",
-    //   white: "#fff",
-    //   black: "#000",
-    // },
+    // screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px'
+    },
     extend: {},
-  },
+  
   plugins: [],
 };
