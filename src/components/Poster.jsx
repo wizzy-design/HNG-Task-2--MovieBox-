@@ -1,11 +1,15 @@
+/* eslint-disable react/prop-types */
 // Icons
 import imdb from "../assets/icons/imdb.svg";
 import tomato from "../assets/icons/tomato.svg";
 import play from "../assets/icons/play.svg";
 
-const Poster = () => {
+const Poster = ({isVisible}) => {
+  // Using Tailwind CSS classes to control visibility
+  const posterClasses = isVisible ? "hidden" : "block";
+  
   return (
-    <div className="relative bg-[url('../src/assets/images/john_wickBg.svg')] h-screen bg-center bg-no-repeat bg-cover">
+    <div className={`relative bg-[url('../src/assets/images/john_wickBg.svg')] h-screen bg-center bg-no-repeat bg-cover ${posterClasses}`}>
       {/* Movie Description */}
       <div className="absolute w-1/3 space-y-4 top-40 left-16">
         {/* Movie Title */}
