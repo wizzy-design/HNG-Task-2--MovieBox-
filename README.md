@@ -10,3 +10,4 @@ MovieBox is a web application that leverages the TMDB API to retrieve movie info
 2. Open your command line prompt.
 3. Execute the command "npm run dev".
 4. Copy the provided URL and paste it into your web browser.
+
